@@ -1,0 +1,23 @@
+# Gradle / Android Studio caches
+.gradle/
+.kotlin/
+.idea/
+*.iml
+
+# Build outputs
+**/build/
+*.apk
+*.aab
+
+# Local environment settings
+local.properties
+**/local.properties
+
+# Generated native build files
+.cxx/
+.externalNativeBuild/
+captures/
+
+# Operating system files
+.DS_Store
+Thumbs.db
