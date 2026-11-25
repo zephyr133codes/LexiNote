@@ -37,25 +37,41 @@ LexiNote 希望让这件事更简单：**点击单词即可查词，也可以直
 
 首页展示已保存文章数量、收藏单词数量、最近阅读和历史项目入口，也可从此处新建文章。
 
-![LexiNote 首页](docs/screenshots/软键首页.jpg)
+<table>
+  <tr><td align="center">
+    <a href="docs/screenshots/软键首页.jpg"><img src="docs/screenshots/软键首页.jpg" alt="LexiNote 首页" width="270"></a><br>
+    首页
+  </td></tr>
+</table>
 
 ### 阅读器与音标标注
 
 阅读器提供标准查词模式和快速音标模式。标准模式点击单词打开词典卡片；快速模式点击单词即可保留或取消音标。已添加的音标显示在原文对应单词上方。
 
-| 标准模式 | 快速模式 |
-| --- | --- |
-| ![阅读器标准模式](docs/screenshots/标准模式%20.jpg) | ![阅读器快速模式](docs/screenshots/快速模式.jpg) |
+<table>
+  <tr>
+    <td align="center"><a href="docs/screenshots/标准模式%20.jpg"><img src="docs/screenshots/标准模式%20.jpg" alt="阅读器标准模式" width="270"></a><br>标准模式</td>
+    <td align="center"><a href="docs/screenshots/快速模式.jpg"><img src="docs/screenshots/快速模式.jpg" alt="阅读器快速模式" width="270"></a><br>快速模式</td>
+  </tr>
+</table>
 
-![添加音标后的文章视图](docs/screenshots/添加音标后的文章视图.jpg)
+<table>
+  <tr><td align="center">
+    <a href="docs/screenshots/添加音标后的文章视图.jpg"><img src="docs/screenshots/添加音标后的文章视图.jpg" alt="添加音标后的文章视图" width="270"></a><br>
+    添加音标后的文章视图
+  </td></tr>
+</table>
 
 ### 查词与词汇管理
 
 词典卡片展示单词音标、词性、释义和词形变化，并提供收藏及保留音标的操作。词库页面可查看浏览记录，并切换到背单词列表。
 
-| 单词查阅卡片 | 单词库列表 |
-| --- | --- |
-| ![单词查阅卡片](docs/screenshots/单词查阅卡片.jpg) | ![单词库列表](docs/screenshots/单词库列表.jpg) |
+<table>
+  <tr>
+    <td align="center"><a href="docs/screenshots/单词查阅卡片.jpg"><img src="docs/screenshots/单词查阅卡片.jpg" alt="单词查阅卡片" width="270"></a><br>单词查阅卡片</td>
+    <td align="center"><a href="docs/screenshots/单词库列表.jpg"><img src="docs/screenshots/单词库列表.jpg" alt="单词库列表" width="270"></a><br>单词库列表</td>
+  </tr>
+</table>
 
 ## 安装与使用
 
