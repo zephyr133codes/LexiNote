@@ -21,3 +21,16 @@ captures/
 # Operating system files
 .DS_Store
 Thumbs.db
+
+# ECDICT source data and generated output
+tools/dictionary/raw/*.csv
+tools/dictionary/output/*.db
+tools/dictionary/output/*.db-*
+tools/dictionary/reports/build_report.json
+
+# Keep the bundled Android dictionary
+!android/app/src/main/assets/dictionary.db
+
+# Python caches
+__pycache__/
+*.pyc
