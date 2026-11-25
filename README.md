@@ -101,7 +101,7 @@ Gradle Wrapper 使用官方 Gradle 9.6.0 分发地址：`https://services.gradle
 │   └── app/src/main/
 │       ├── assets/             # 离线词典及第三方数据声明
 │       └── java/com/lexinote/  # Kotlin 应用源码
-├── docs/screenshots/           # 软件截图（待补充）
+├── docs/screenshots/           # 软件截图
 ├── CHANGELOG.md                # 阶段开发记录
 ├── LICENSE                     # 项目原创代码许可证
 └── THIRD_PARTY_NOTICES.md      # 第三方数据详细声明
