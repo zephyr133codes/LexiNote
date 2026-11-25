@@ -1,58 +1,81 @@
 # LexiNote
 
+**一款面向大学生英语演讲和文章阅读的轻量化查词、音标标注工具。**
+
 **Offline English Reading & Phonetic Annotation App**
-
-LexiNote 是一款面向英语阅读的离线 Android 应用。它希望把文章阅读、发音标注和词汇积累放在一个简单的本地工作流中，减少阅读时频繁切换工具的需要。
-
-> 当前仓库处于第一阶段开源发布准备中，尚未正式发布公开安装包。
 
 ## 下载 Android APK
 
-**[前往 Gitee Releases 下载 Android APK（发布后启用）](#)**
+**最新公开测试版：v0.3.6**
 
-目前尚无 Gitee Release 或公开 APK。待 Release 上传成功后，请将此处占位链接替换为真实下载地址。普通用户安装已发布的 APK 不需要安装 Android Studio。
+[前往 Gitee Release 下载 Android APK](https://gitee.com/zephyrmiao133/lexinote/releases)
 
-## 核心功能
+在 Release 页面下载 `app-release.apk`，即可在 Android 手机上安装使用，无需 Android Studio。
 
-- 创建、编辑、阅读和管理英语文章。
-- 标准模式：点击单词查看完整的离线词典释义及词形信息。
-- 快速音标模式：点击单词直接保留或取消音标标注。
-- 在原文上方显示音标，并以音标、原文、译文三行方式排版阅读。
-- 使用离线英汉词典查询，并查询英语词形变化。
-- 收藏单词、查看浏览记录，并在生词库中复习。
-- 文章、音标标注和词汇记录保存在设备本地；Room 使用 SQLite 存储。
+## 设计初衷
 
-## 截图
+大学生准备英文 Presentation 时，常常已经写好了演讲稿，却发现里面有不少不会读或不认识的单词。
 
-真实截图计划存放于 [`docs/screenshots/`](docs/screenshots/)。目前尚未加入截图素材，以下位置待后续补充：
+传统查词方式需要反复选中单词、复制、切换词典应用、粘贴查询，再把音标整理回演讲稿。处理整篇文章时，这些重复操作会打断阅读和准备过程。
 
-| 界面 | 截图 |
+LexiNote 希望让这件事更简单：**点击单词即可查词，也可以直接将音标保留在原文中，方便继续阅读、朗读和复习。**
+
+## 主要功能
+
+- **标准模式：** 点击单词查看离线词典详情，包括音标、词性、中文释义和词形信息。
+- **快速模式：** 点击单词即可添加或取消该词的音标标注。
+- **原文音标标注：** 将音标显示在对应英文单词上方，阅读器以音标、原文、译文三行排版。
+- **离线词典：** 使用本地词典查询已收录词汇，并查询英语词形变化。
+- **生词管理：** 收藏单词、查看浏览记录，并在生词库中复习。
+- **文章管理：** 创建、编辑、阅读和保存英文文章。
+
+## 软件截图
+
+以下为 LexiNote 当前版本的实际界面截图。
+
+### 首页
+
+首页展示已保存文章数量、收藏单词数量、最近阅读和历史项目入口，也可从此处新建文章。
+
+![LexiNote 首页](docs/screenshots/软键首页.jpg)
+
+### 阅读器与音标标注
+
+阅读器提供标准查词模式和快速音标模式。标准模式点击单词打开词典卡片；快速模式点击单词即可保留或取消音标。已添加的音标显示在原文对应单词上方。
+
+| 标准模式 | 快速模式 |
 | --- | --- |
-| 首页 | 待补充：`docs/screenshots/home.png` |
-| 阅读器标准模式 | 待补充：`docs/screenshots/reader-standard.png` |
-| 阅读器快速模式 | 待补充：`docs/screenshots/reader-quick.png` |
-| 离线词典弹窗 | 待补充：`docs/screenshots/dictionary.png` |
-| 生词库 | 待补充：`docs/screenshots/vocabulary.png` |
+| ![阅读器标准模式](docs/screenshots/标准模式%20.jpg) | ![阅读器快速模式](docs/screenshots/快速模式.jpg) |
+
+![添加音标后的文章视图](docs/screenshots/添加音标后的文章视图.jpg)
+
+### 查词与词汇管理
+
+词典卡片展示单词音标、词性、释义和词形变化，并提供收藏及保留音标的操作。词库页面可查看浏览记录，并切换到背单词列表。
+
+| 单词查阅卡片 | 单词库列表 |
+| --- | --- |
+| ![单词查阅卡片](docs/screenshots/单词查阅卡片.jpg) | ![单词库列表](docs/screenshots/单词库列表.jpg) |
 
 ## 安装与使用
 
-Release 发布后，在项目 Releases 页面下载适用于 Android 的 APK，在手机上打开并按系统提示安装；无需 Android Studio。Android 版本要求以正式构建的 APK 配置为准（当前项目最低 SDK 为 Android 8.0 / API 26）。
+从上方 Gitee Release 页面下载 `app-release.apk`，在 Android 手机上打开安装包并按系统提示完成安装。安装 APK 不需要 Android Studio。当前项目最低 Android 版本为 Android 8.0（API 26）。
 
-首次使用可创建文章并进入阅读器；标准模式点击单词查看词典，快速音标模式点击单词切换该处音标标注。收藏的词汇可在生词库中查看和复习。
+创建或打开文章后，可在标准模式点击单词查看词典详情；切换到快速模式后，点击单词即可添加或取消音标。收藏的词汇可在生词库中查看和复习。
 
 ## 技术栈
 
 - Kotlin
 - Android Jetpack Compose / Material 3
-- AndroidX Lifecycle、ViewModel、Kotlin Coroutines/Flow
-- Room（本地 SQLite 持久化）与 KSP
-- JUnit、AndroidX Instrumentation/UI 测试依赖
+- AndroidX Lifecycle、ViewModel、Kotlin Coroutines / Flow
+- Room 与 SQLite 本地存储，KSP
+- JUnit、AndroidX Instrumentation / UI 测试依赖
 
 ## 开发与构建
 
-使用 Android Studio 打开仓库中的 `android/` 工程，并配置兼容的 Android SDK、JDK 与 Android Gradle Plugin 环境。正常情况下可在 Android Studio 同步 Gradle 后运行 `app` 配置。
+使用 Android Studio 打开仓库中的 `android/` 工程，并配置兼容的 Android SDK、JDK 与 Android Gradle Plugin 环境。可在 Android Studio 同步 Gradle 后运行 `app` 配置。
 
-Gradle Wrapper 使用官方 Gradle 9.6.0 分发地址：`https://services.gradle.org/distributions/gradle-9.6.0-bin.zip`。请使用与 Android Gradle Plugin、Android SDK 要求兼容的 JDK 和 Android Studio 环境；项目构建尚未在其他开发环境验证。
+Gradle Wrapper 使用官方 Gradle 9.6.0 分发地址：`https://services.gradle.org/distributions/gradle-9.6.0-bin.zip`。请按项目配置准备兼容的 JDK 和 Android SDK；项目尚未在其他开发环境验证构建。
 
 ## 项目结构
 
@@ -62,27 +85,29 @@ Gradle Wrapper 使用官方 Gradle 9.6.0 分发地址：`https://services.gradle
 │   └── app/src/main/
 │       ├── assets/             # 离线词典及第三方数据声明
 │       └── java/com/lexinote/  # Kotlin 应用源码
-├── docs/screenshots/           # 项目截图（待补充）
+├── docs/screenshots/           # 软件截图（待补充）
 ├── CHANGELOG.md                # 阶段开发记录
-├── LICENSE                     # LexiNote 原创代码许可证
-└── THIRD_PARTY_NOTICES.md      # 第三方数据声明
+├── LICENSE                     # 项目原创代码许可证
+└── THIRD_PARTY_NOTICES.md      # 第三方数据详细声明
 ```
 
-## 后续计划
+## 后续规划
 
-- 支持 TXT、Markdown、Word 文件导入。
-- 探索 AI 语境释义与 AI 文章生成。
-- 补充真实界面截图，完善公开构建配置并发布 APK。
+- 支持 TXT、Markdown 和 Word 文档导入。
+- 探索结合上下文的词义分析。
+- 增加更丰富的阅读注释方式。
 
-以上为规划，尚未实现。
+以上为后续计划，尚未实现。
 
-## 第三方词典数据与许可证
+## 开源许可证与第三方词典
 
-- ECDICT：[https://github.com/skywind3000/ECDICT](https://github.com/skywind3000/ECDICT)（MIT License）。
-- UniMorph English：[https://github.com/unimorph/eng](https://github.com/unimorph/eng)（CC BY-SA 3.0）。
+项目自有且有权授权的原创程序代码采用 MIT License，详见 [LICENSE](LICENSE)。第三方词典数据遵循各自许可：
 
-项目自有且有权授权的原创程序代码依根目录 [MIT License](LICENSE) 授权。该许可不覆盖第三方词典数据；详见[第三方数据详细声明](THIRD_PARTY_NOTICES.md)。
+- ECDICT：[https://github.com/skywind3000/ECDICT](https://github.com/skywind3000/ECDICT)（MIT License）
+- UniMorph English：[https://github.com/unimorph/eng](https://github.com/unimorph/eng)（CC BY-SA 3.0）
+
+第三方数据的来源、修改说明、版权通知和再分发条件请参阅 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。项目代码的 MIT 许可不替代第三方数据许可。
 
 ## 贡献与问题反馈
 
-欢迎通过 Gitee 项目 Issues 反馈问题、提出建议或讨论贡献。仓库公开地址确定后，请在此补充实际项目链接。提交贡献前请说明变更内容，并确认所提交内容具备相应授权。
+欢迎在 [Gitee Issues](https://gitee.com/zephyrmiao133/lexinote/issues) 反馈问题、提出建议或讨论贡献。提交贡献前，请说明变更内容并确认提交内容具备相应授权。
