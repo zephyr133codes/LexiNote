@@ -25,12 +25,20 @@ import com.lexinote.app.data.AnnotationEntity
 
 private val readerWord = Regex("[A-Za-z]+(?:['’\\-][A-Za-z]+)*")
 private class ReaderHitGeometry { var plan: ReaderLinePlan? = null }
-private data class ReaderLayers(val token: ReaderToken, val phonetic: String?, val meaning: String?)
+private data class ReaderLayers(
+    val token: ReaderToken,
+    val phonetic: String?,
+    val meaning: String?,
+    val phoneticSourceType: String,
+    val phoneticSourceLemma: String?
+)
 
 @Composable
 internal fun ReaderParagraphLayout(
     block: ReaderBlock, annotations: Map<Int, AnnotationEntity>,
-    phonetics: Boolean, translations: Boolean, onWord: (ReaderToken) -> Unit
+    phonetics: Boolean, translations: Boolean,
+    onLongPress: (ReaderToken) -> Unit = {},
+    onWord: (ReaderToken) -> Unit
 ) {
     val layers = remember(block, annotations, phonetics, translations) {
         block.tokens.map { token ->
@@ -39,12 +47,15 @@ internal fun ReaderParagraphLayout(
             }
             ReaderLayers(token,
                 annotation?.phonetic?.trim()?.trim('/')?.takeIf { phonetics && it.isNotBlank() }?.let { "/$it/" },
-                annotation?.meaning?.takeIf { translations && it.isNotBlank() })
+                annotation?.meaning?.takeIf { translations && it.isNotBlank() },
+                annotation?.phoneticSourceType ?: "word",
+                annotation?.phoneticSourceLemma)
         }
     }
     // The holder belongs to this exact layer set and is updated by measurement, without a state-write loop.
     val geometry = remember(layers) { ReaderHitGeometry() }
     val callback = rememberUpdatedState(onWord)
+    val longPressCallback = rememberUpdatedState(onLongPress)
     val colors = MaterialTheme.colorScheme
     val dark = colors.surface.luminance() < 0.5f
     val originalStyle = MaterialTheme.typography.bodyLarge.copy(
@@ -57,15 +68,30 @@ internal fun ReaderParagraphLayout(
     )
     Layout(
         modifier = Modifier.fillMaxWidth().pointerInput(geometry, layers) {
-            detectTapGestures { position ->
-                val index = geometry.plan?.hit(position.x, position.y) ?: return@detectTapGestures
-                val token = layers[index].token
-                if (readerWord.matches(token.text)) callback.value(token)
-            }
+            detectTapGestures(
+                onTap = tap@{ position ->
+                    val index = geometry.plan?.hit(position.x, position.y) ?: return@tap
+                    val token = layers[index].token
+                    if (readerWord.matches(token.text)) callback.value(token)
+                },
+                onLongPress = longPress@{ position ->
+                    val index = geometry.plan?.hit(position.x, position.y) ?: return@longPress
+                    val token = layers[index].token
+                    if (readerWord.matches(token.text)) longPressCallback.value(token)
+                }
+            )
         },
         content = {
             layers.forEach { layer ->
-                layer.phonetic?.let { Text(it, style = auxiliaryStyle, color = if (dark) Color(0xFFA7C3DE) else Color(0xFF526F89), maxLines = 2, overflow = TextOverflow.Ellipsis) }
+                layer.phonetic?.let {
+                    val color = when {
+                        layer.phoneticSourceType == "lemma" && dark -> Color(0xFFE3C486)
+                        layer.phoneticSourceType == "lemma" -> Color(0xFF80621E)
+                        dark -> Color(0xFFA7C3DE)
+                        else -> Color(0xFF526F89)
+                    }
+                    Text(it, style = auxiliaryStyle, color = color, maxLines = 2, overflow = TextOverflow.Ellipsis)
+                }
                 Text(layer.token.text, style = originalStyle)
                 layer.meaning?.let { Text(it, style = auxiliaryStyle, color = if (dark) Color(0xFFA1D1B3) else Color(0xFF386B51), maxLines = 2, overflow = TextOverflow.Ellipsis) }
             }

@@ -1,0 +1,1332 @@
+{
+  "ecdict.csv": {
+    "bytes": 66009548,
+    "sha256": "d1ecbdf9ee2b920afb6f430ca6b6bb9f559588cf0dff86e04bd255f9390843cc",
+    "encoding": "UTF-8 (optional BOM) validated",
+    "physical_lines": 770612,
+    "first_20_lines": [
+      "word,phonetic,definition,translation,pos,collins,oxford,tag,bnc,frq,exchange,detail,audio",
+      "'hood,hʊd,,\"n. 罩；风帽；（布质）面罩；学位连领帽（表示学位种类）\\nv. 覆盖；用头巾包；使(马,鹰等)戴头罩；给…加罩\\n[网络] 胡德；兜帽；引擎盖\",,,,,0,0,,,",
+      "'s Gravenhage,\",skrɑ:vən'hɑ:ɡə\",,[荷兰语]海牙(= Hague),,,,,0,0,,,",
+      "'tween,twi:n,,prep. [诗歌用语] = between [亦作 tweeny],,,,,0,0,,,",
+      "'tween decks,,,[网络] 甲板间；二层舱；双层甲板,,,,,0,0,,,",
+      "-ability,ə'biliti,,\"suf. [用于构成名词, 意义相当于-able]表示“能力”, “可能性”, “倾向性”, “适宜性”\",,,,,0,0,,,",
+      "-able,əbl,,\"suf. [附在动词或名词后构成形容词] 表示：“能…的,会…的”：durable; “可以…的”：drinkable; “具有…特性的”：fashionable; “有助于…的”,“倾向于…的”：peaceable; “易于…的”：breakable\",,,,,0,0,,,",
+      "-ably,əbli,,suf. [构成与-able结尾的形容词相应的副词],,,,,0,0,,,",
+      "-acy,əsi,,\"suf. [用于构成抽象名词]表示性质, 状态, 位置, 地位, 职位\",,,,,0,0,,,",
+      "-ad,'æd,,\" [医]〔状语性后缀〕意为向…方, 向…侧\",,,,,0,0,,,",
+      "-ade,eid,,\"suf. 用以构成名词表示：“行动”,“…的动作”：blockade; “行动者”：renegade; “行动者的集体”：cavalcade; “行动的产物”：arcade; “参与”,“参加”：brigade\",,,,,0,0,,,",
+      "-adelphous,ə'delfəs,, 表示“[植物学]有雄蕊束的”：monadelphous,,,,,0,0,,,",
+      "-aemia,'i:miə,, [用以构成名词]表示血液,,,,,0,0,,,",
+      "-age,idʒ,,comb. 表示数量;表示动作;表示身份;表示地方,,,,,0,0,,,",
+      "-agogue,ə'ɡɒɡ,,\" [医]〔后缀〕意为催, 利\",,,,,0,0,,,",
+      "-aholic,,, 嗜好…的；对…成瘾的,,,,,0,0,,,",
+      "-al,,,\" [医]〔后缀〕用于化合物名之后, 示有醛基-CHO存在, 如chloral（氯醛, 三氯乙醛）\",,,,,0,0,,,",
+      "-algia,'ælɡə,, [医]〔后缀〕意为痛,,,,,0,0,,,",
+      "-alia,,, （与某活动或兴趣范围）有关的物品,,,,,0,0,,,",
+      "-ally,,, 以-al结尾的形容词加ly构成副词),,,,,0,0,,,"
+    ],
+    "columns": [
+      "word",
+      "phonetic",
+      "definition",
+      "translation",
+      "pos",
+      "collins",
+      "oxford",
+      "tag",
+      "bnc",
+      "frq",
+      "exchange",
+      "detail",
+      "audio"
+    ],
+    "logical_csv_records": 770611,
+    "unique_casefold_words": 770611,
+    "duplicate_rows": 0,
+    "rows_with_overflow_columns": 0,
+    "missing_translation_rows": 373,
+    "translation_rows_with_literal_backslash_newline": 52999,
+    "translation_rows_with_physical_newline": 0,
+    "nonempty_fields": {
+      "word": 770611,
+      "phonetic": 218065,
+      "translation": 770238,
+      "bnc": 770611,
+      "frq": 770611,
+      "definition": 160884,
+      "collins": 13633,
+      "oxford": 3461,
+      "tag": 14942,
+      "detail": 1,
+      "exchange": 96290
+    },
+    "tag_frequency": {
+      "gre": 7504,
+      "toefl": 6974,
+      "cet6": 5407,
+      "ielts": 5040,
+      "ky": 4801,
+      "cet4": 3849,
+      "gk": 3677,
+      "zk": 1603
+    },
+    "exchange_code_frequency": {
+      "0": 58625,
+      "1": 58625,
+      "s": 33581,
+      "i": 12650,
+      "p": 11711,
+      "d": 11251,
+      "3": 8727,
+      "r": 713,
+      "t": 508,
+      "f": 5
+    },
+    "exchange_parse_errors": 25,
+    "exchange_examples": {
+      "s": [
+        {
+          "word": "A-bomb",
+          "form": "a-bombs"
+        },
+        {
+          "word": "a-cup",
+          "form": "a-cups"
+        },
+        {
+          "word": "a-frame",
+          "form": "a-frames"
+        },
+        {
+          "word": "a-grade",
+          "form": "a-grades"
+        },
+        {
+          "word": "a-level",
+          "form": "a-levels"
+        },
+        {
+          "word": "a-particle",
+          "form": "a-particles"
+        }
+      ],
+      "0": [
+        {
+          "word": "A-bombs",
+          "form": "a-bomb"
+        },
+        {
+          "word": "a-coming",
+          "form": "a-come"
+        },
+        {
+          "word": "a-coupled",
+          "form": "a-couple"
+        },
+        {
+          "word": "a-cups",
+          "form": "a-cup"
+        },
+        {
+          "word": "a-fluttering",
+          "form": "a-flutter"
+        },
+        {
+          "word": "a-frames",
+          "form": "a-frame"
+        }
+      ],
+      "1": [
+        {
+          "word": "A-bombs",
+          "form": "s"
+        },
+        {
+          "word": "a-coming",
+          "form": "i"
+        },
+        {
+          "word": "a-coupled",
+          "form": "p"
+        },
+        {
+          "word": "a-cups",
+          "form": "s"
+        },
+        {
+          "word": "a-fluttering",
+          "form": "i"
+        },
+        {
+          "word": "a-frames",
+          "form": "s"
+        }
+      ],
+      "i": [
+        {
+          "word": "a-come",
+          "form": "a-coming"
+        },
+        {
+          "word": "a-flutter",
+          "form": "a-fluttering"
+        },
+        {
+          "word": "a-go",
+          "form": "a-going"
+        },
+        {
+          "word": "a-rain",
+          "form": "a-raining"
+        },
+        {
+          "word": "a-sit",
+          "form": "a-sitting"
+        },
+        {
+          "word": "aah",
+          "form": "aahing"
+        }
+      ],
+      "p": [
+        {
+          "word": "a-couple",
+          "form": "a-coupled"
+        },
+        {
+          "word": "aaah",
+          "form": "aaahed"
+        },
+        {
+          "word": "aah",
+          "form": "aahed"
+        },
+        {
+          "word": "abandon",
+          "form": "abandoned"
+        },
+        {
+          "word": "abandoned",
+          "form": "abandoned"
+        },
+        {
+          "word": "abase",
+          "form": "abased"
+        }
+      ],
+      "d": [
+        {
+          "word": "a-level",
+          "form": "a-levelled"
+        },
+        {
+          "word": "a-list",
+          "form": "a-listed"
+        },
+        {
+          "word": "abandon",
+          "form": "abandoned"
+        },
+        {
+          "word": "abandoned",
+          "form": "abandoned"
+        },
+        {
+          "word": "abase",
+          "form": "abased"
+        },
+        {
+          "word": "abash",
+          "form": "abashed"
+        }
+      ],
+      "3": [
+        {
+          "word": "abandon",
+          "form": "abandons"
+        },
+        {
+          "word": "abase",
+          "form": "abases"
+        },
+        {
+          "word": "abash",
+          "form": "abashes"
+        },
+        {
+          "word": "abate",
+          "form": "abates"
+        },
+        {
+          "word": "abbe",
+          "form": "abbes"
+        },
+        {
+          "word": "abbreviate",
+          "form": "abbreviates"
+        }
+      ],
+      "r": [
+        {
+          "word": "abing",
+          "form": "abinger"
+        },
+        {
+          "word": "ABL",
+          "form": "abler"
+        },
+        {
+          "word": "abstruse",
+          "form": "abstruser"
+        },
+        {
+          "word": "AF",
+          "form": "afer"
+        },
+        {
+          "word": "airy",
+          "form": "airier"
+        },
+        {
+          "word": "AK",
+          "form": "aker"
+        }
+      ],
+      "t": [
+        {
+          "word": "ABL",
+          "form": "ablest"
+        },
+        {
+          "word": "acute",
+          "form": "acutest"
+        },
+        {
+          "word": "ADDR",
+          "form": "addrest"
+        },
+        {
+          "word": "adv",
+          "form": "advest"
+        },
+        {
+          "word": "apt",
+          "form": "aptest"
+        },
+        {
+          "word": "arcane",
+          "form": "arcanest"
+        }
+      ],
+      "f": [
+        {
+          "word": "court-martial",
+          "form": "courts-martial"
+        },
+        {
+          "word": "DJ",
+          "form": "DJs"
+        },
+        {
+          "word": "fresco",
+          "form": "frescos"
+        },
+        {
+          "word": "Sunday",
+          "form": "Sundays"
+        },
+        {
+          "word": "yen",
+          "form": "yen"
+        }
+      ]
+    },
+    "duplicate_conflict_counts": {},
+    "required_samples": {
+      "go": {
+        "word": "go",
+        "translation": "vi. 去, 走, 达到, 运转, 查阅, 消失, 结束, 放弃, 花费, 流传, 趋于, 打算, 剩下\\nvt. 以...打赌, 对付, 忍受, 出产, 为被捕者出(保释金)\\nn. 去, 尝试, 进行",
+        "phonetic": "gou",
+        "exchange": "i:going/p:went/d:gone/3:goes",
+        "tag": "zk gk ielts",
+        "rows": 1
+      },
+      "went": {
+        "word": "went",
+        "translation": "go的过去式",
+        "phonetic": "went",
+        "exchange": "0:go/1:p",
+        "tag": "",
+        "rows": 1
+      },
+      "gone": {
+        "word": "gone",
+        "translation": "a. 离去的, 死去的, 用完的\\ngo的过去分词",
+        "phonetic": "gɒn",
+        "exchange": "0:go/1:d/s:gones",
+        "tag": "",
+        "rows": 1
+      },
+      "going": {
+        "word": "going",
+        "translation": "n. 去, 离去, 工作情况, 地面状况, 行为\\na. 进行中的, 流行的, 成功的, 现存的",
+        "phonetic": "'gәuiŋ",
+        "exchange": "0:go/1:i/s:goings/i:going",
+        "tag": "",
+        "rows": 1
+      },
+      "goes": {
+        "word": "goes",
+        "translation": "v. 前进；行走（go的第三人称单数形式）",
+        "phonetic": "ɡәus",
+        "exchange": "0:go/1:3",
+        "tag": "",
+        "rows": 1
+      },
+      "study": {
+        "word": "study",
+        "translation": "n. 学习, 研究, 学科, 论文, 求学, 书房, 试作\\nvt. 学习, 读书, 研究, 考虑, 计划\\nvi. 学习, 思索",
+        "phonetic": "'stʌdi",
+        "exchange": "s:studies/i:studying/d:studied/p:studied/3:studies",
+        "tag": "zk gk ielts",
+        "rows": 1
+      },
+      "studied": {
+        "word": "studied",
+        "translation": "a. 有计划的, 慎重的",
+        "phonetic": "'stʌdid",
+        "exchange": "0:study/1:dp/p:studied/d:studied",
+        "tag": "gre",
+        "rows": 1
+      },
+      "studying": {
+        "word": "studying",
+        "translation": "v. 学习；研究（study的ing形式）",
+        "phonetic": "",
+        "exchange": "0:study/1:i/i:studying",
+        "tag": "",
+        "rows": 1
+      },
+      "run": {
+        "word": "run",
+        "translation": "n. 跑, 赛跑, 奔跑, 奔跑的路程, 趋向, 流出, 运转时间, 连续\\nvi. 跑, 奔跑, 跑步, 赛跑, 竞赛, 行驶, 运转, 进行, 蔓延\\nvt. 使跑, 参赛, 追究, 驾驶, 开动, 管理, 经营, 使流出, 运行\\na. 熔化的, 融化的, 浇铸的\\nrun的过去式和过去分词\\n[计] 运行",
+        "phonetic": "rʌn",
+        "exchange": "p:ran/i:running/d:run/0:run/1:d/3:runs/s:runs",
+        "tag": "zk gk",
+        "rows": 1
+      },
+      "ran": {
+        "word": "ran",
+        "translation": "run的过去式",
+        "phonetic": "ræn",
+        "exchange": "0:run/1:p/s:rans",
+        "tag": "",
+        "rows": 1
+      },
+      "running": {
+        "word": "running",
+        "translation": "n. 赛跑, 流出, 运转\\na. 流动的, 跑着的, 连续的",
+        "phonetic": "'rʌniŋ",
+        "exchange": "0:run/1:i/i:running/s:runnings",
+        "tag": "gk",
+        "rows": 1
+      },
+      "child": {
+        "word": "child",
+        "translation": "n. 孩子, 产物, 追随者\\n[医] 儿童",
+        "phonetic": "tʃaild",
+        "exchange": "s:children",
+        "tag": "zk gk ielts",
+        "rows": 1
+      },
+      "children": {
+        "word": "children",
+        "translation": "pl. 孩子, 孩子们",
+        "phonetic": "'tʃildrәn",
+        "exchange": "0:child/1:s/s:childrens",
+        "tag": "ielts",
+        "rows": 1
+      },
+      "mouse": {
+        "word": "mouse",
+        "translation": "n. 老鼠, 胆小羞怯的人, 鼠标\\nvi. 捕鼠, 窥探\\nvt. 探出\\n[计] 鼠标",
+        "phonetic": "maus",
+        "exchange": "s:mice/i:mousing/p:moused/3:mouses/d:moused",
+        "tag": "zk gk cet4 cet6 ky",
+        "rows": 1
+      },
+      "mice": {
+        "word": "mice",
+        "translation": "pl. 老鼠",
+        "phonetic": "mais",
+        "exchange": "0:mouse/1:s",
+        "tag": "",
+        "rows": 1
+      },
+      "see": {
+        "word": "see",
+        "translation": "vt. 看见, 查看, 参观, 游览, 理解, 知道, 同意\\nvi. 看, 观看, 注意, 知道, 考虑\\nn. 主教的职位",
+        "phonetic": "si:",
+        "exchange": "d:seen/p:saw/i:seeing/3:sees",
+        "tag": "zk gk",
+        "rows": 1
+      },
+      "saw": {
+        "word": "saw",
+        "translation": "n. 锯子, 谚语\\nvt. 锯, 锯开, 来回移动\\nvi. 拉锯, 移动\\nsee的过去式",
+        "phonetic": "sɒ:",
+        "exchange": "0:see/1:p/i:sawing/s:saws/d:sawn/p:sawed/3:saws",
+        "tag": "cet4 cet6 ky",
+        "rows": 1
+      },
+      "seen": {
+        "word": "seen",
+        "translation": "see的过去分词",
+        "phonetic": "si:n",
+        "exchange": "0:see/1:d",
+        "tag": "",
+        "rows": 1
+      },
+      "good": {
+        "word": "good",
+        "translation": "n. 善行, 好处, 利益\\na. 好的, 优良的, 上等的, 愉快的, 有益的, 好心的, 慈善的, 虔诚的",
+        "phonetic": "gud",
+        "exchange": "t:best/r:better",
+        "tag": "zk gk ielts",
+        "rows": 1
+      },
+      "better": {
+        "word": "better",
+        "translation": "a. 较好的\\nadv. 比较好",
+        "phonetic": "'betә",
+        "exchange": "0:good/1:r/d:bettered/s:betters/i:bettering/p:bettered/3:betters",
+        "tag": "gk ielts",
+        "rows": 1
+      },
+      "best": {
+        "word": "best",
+        "translation": "a. 最好的\\nadv. 最好地\\nn. 最好的人",
+        "phonetic": "best",
+        "exchange": "0:good/1:t/r:best/3:bests/d:bested/i:besting/p:bested",
+        "tag": "ielts",
+        "rows": 1
+      },
+      "book": {
+        "word": "book",
+        "translation": "n. 书, 书籍, 帐簿, 名册, 工作簿\\nv. 登记, 预订\\n[计] 工作簿",
+        "phonetic": "buk",
+        "exchange": "s:books/d:booked/p:booked/i:booking/3:books",
+        "tag": "zk gk ielts",
+        "rows": 1
+      },
+      "books": {
+        "word": "books",
+        "translation": "n. 书评；书籍（book的复数）",
+        "phonetic": "",
+        "exchange": "1:s3/0:book",
+        "tag": "ielts",
+        "rows": 1
+      },
+      "read": {
+        "word": "read",
+        "translation": "v. 读, 阅读, 理解\\na. 有学问的\\nn. 读取, 阅读\\n[计] 读取",
+        "phonetic": "ri:d",
+        "exchange": "d:read/0:read/1:dp/i:reading/p:read/3:reads",
+        "tag": "zk gk",
+        "rows": 1
+      },
+      "important": {
+        "word": "important",
+        "translation": "a. 重要的, 有地位的, 大量的, 显要的, 自负的\\n[计] 要点",
+        "phonetic": "im'pɒ:tәnt",
+        "exchange": "",
+        "tag": "zk gk ielts",
+        "rows": 1
+      },
+      "introduction": {
+        "word": "introduction",
+        "translation": "n. 介绍, 传入, 采用, 初步",
+        "phonetic": ".intrә'dʌkʃәn",
+        "exchange": "s:introductions",
+        "tag": "zk gk cet4 cet6 ky ielts",
+        "rows": 1
+      },
+      "factory": {
+        "word": "factory",
+        "translation": "n. 工厂, 产生地, 代理店\\n[经] 工厂, 代理店, 商行在国外的代理处",
+        "phonetic": "'fæktәri",
+        "exchange": "s:factories",
+        "tag": "zk gk ielts",
+        "rows": 1
+      },
+      "practice": {
+        "word": "practice",
+        "translation": "n. 实践, 练习, 实行, 惯例, 习惯, 开业\\nv. 实践, 实行, 练习, 实习, 业务",
+        "phonetic": "'præktis",
+        "exchange": "s:practices/3:practices/i:practicing/p:practiced/d:practiced",
+        "tag": "zk gk ielts",
+        "rows": 1
+      }
+    }
+  },
+  "lemma.en.txt": {
+    "bytes": 2318694,
+    "sha256": "e255b097404e3e0052060e2ddf6e15a1414f577071d63d51d2ca0ce9dacee0fc",
+    "encoding": "UTF-8 (optional BOM) validated",
+    "physical_lines": 84497,
+    "first_20_lines": [
+      "; En Lemma Database (version 1.0.3)",
+      "; Compiled by Lin Wei (https://github.com/skywind3000), Mar 28, 2017",
+      "; by referencing the 100M+ words in the British National Corpus (BNC), ",
+      "; NodeBox Linguistics and Yasumasa Someya's lemma list.",
+      "; This lemma list is provided \"as is\" and is free to use for any research",
+      "; and/or educational purposes. ",
+      "; The list currently contains 186,523 words (tokens) in 84,487 lemma groups.",
+      "; If you have any questions or comments about this lemma list, feel free ",
+      "; to contact me (skywind3000@163.com), at any time..",
+      ";",
+      "be/4109826 -> is,was,are,were,'s,been,being,'re,'m,am,m",
+      "have/1315648 -> had,has,'ve,having,'s,'d,d,ve",
+      "it/1213224 -> its,they",
+      "he/1196022 -> his,him,they",
+      "i/1133697 -> my,me,we,is",
+      "they/841960 -> their,them,'em",
+      "you/804279 -> your,ya,ye",
+      "not/767330 -> n't",
+      "she/653505 -> her",
+      "do/535646 -> did,does,done,doing,du,d'"
+    ],
+    "parsed_groups": 84487,
+    "parsed_form_relations": 102867,
+    "malformed_data_lines": 0,
+    "forms_with_multiple_lemmas": 828,
+    "distinct_forms": 102034,
+    "required_samples": {
+      "went": [
+        "go"
+      ],
+      "gone": [
+        "go"
+      ],
+      "going": [
+        "go"
+      ],
+      "goes": [
+        "go"
+      ],
+      "studied": [
+        "study"
+      ],
+      "studying": [
+        "study"
+      ],
+      "ran": [
+        "run"
+      ],
+      "running": [
+        "run"
+      ],
+      "children": [
+        "child"
+      ],
+      "mice": [
+        "mouse"
+      ],
+      "saw": [
+        "see"
+      ],
+      "seen": [
+        "see"
+      ],
+      "better": [
+        "good",
+        "well"
+      ],
+      "best": [
+        "good"
+      ],
+      "books": [
+        "book"
+      ],
+      "read": []
+    },
+    "examples": [
+      {
+        "lemma": "be",
+        "forms": [
+          "is",
+          "was",
+          "are",
+          "were",
+          "'s",
+          "been",
+          "being",
+          "'re",
+          "'m",
+          "am",
+          "m"
+        ]
+      },
+      {
+        "lemma": "have",
+        "forms": [
+          "had",
+          "has",
+          "'ve",
+          "having",
+          "'s",
+          "'d",
+          "d",
+          "ve"
+        ]
+      },
+      {
+        "lemma": "it",
+        "forms": [
+          "its",
+          "they"
+        ]
+      },
+      {
+        "lemma": "he",
+        "forms": [
+          "his",
+          "him",
+          "they"
+        ]
+      },
+      {
+        "lemma": "i",
+        "forms": [
+          "my",
+          "me",
+          "we",
+          "is"
+        ]
+      },
+      {
+        "lemma": "they",
+        "forms": [
+          "their",
+          "them",
+          "'em"
+        ]
+      },
+      {
+        "lemma": "you",
+        "forms": [
+          "your",
+          "ya",
+          "ye"
+        ]
+      },
+      {
+        "lemma": "not",
+        "forms": [
+          "n't"
+        ]
+      },
+      {
+        "lemma": "she",
+        "forms": [
+          "her"
+        ]
+      },
+      {
+        "lemma": "do",
+        "forms": [
+          "did",
+          "does",
+          "done",
+          "doing",
+          "du",
+          "d'"
+        ]
+      },
+      {
+        "lemma": "we",
+        "forms": [
+          "our",
+          "us"
+        ]
+      },
+      {
+        "lemma": "will",
+        "forms": [
+          "'ll",
+          "wo",
+          "ll"
+        ]
+      }
+    ]
+  },
+  "eng.txt": {
+    "bytes": 18022905,
+    "sha256": "20a191cefdc7cad6fa74b00f49d6f658684f17b14541aae372e5a3d5a8c15c67",
+    "encoding": "UTF-8 (optional BOM) validated",
+    "physical_lines": 652477,
+    "first_20_lines": [
+      "microtome\tmicrotomes\tN;PL",
+      "microtome\tmicrotomes\tV;PRS;3;SG",
+      "microtome\tmicrotoming\tV;V.PTCP;PRS",
+      "microtome\tmicrotomed\tV;PST",
+      "microtome\tmicrotomed\tV;V.PTCP;PST",
+      "eat\teats\tV;PRS;3;SG",
+      "eat\teating\tV;V.PTCP;PRS",
+      "eat\tate\tV;PST",
+      "eat\teaten\tV;V.PTCP;PST",
+      "eat\teats\tN;PL",
+      "rastrography\trastrographies\tN;PL",
+      "magnetencephalography\tmagnetencephalographies\tN;PL",
+      "microtome\tmicrotomes\tN;PL",
+      "microtome\tmicrotomes\tV;PRS;3;SG",
+      "microtome\tmicrotoming\tV;V.PTCP;PRS",
+      "microtome\tmicrotomed\tV;PST",
+      "microtome\tmicrotomed\tV;V.PTCP;PST",
+      "rectangularize\trectangularizes\tV;PRS;3;SG",
+      "rectangularize\trectangularizing\tV;V.PTCP;PRS",
+      "rectangularize\trectangularized\tV;PST"
+    ],
+    "records": 652477,
+    "malformed_records": 0,
+    "duplicate_exact_relations": 913,
+    "unique_relation_triples": 651564,
+    "distinct_tagsets": 10,
+    "tagset_frequency": {
+      "N;SG": 263249,
+      "ADJ": 132384,
+      "N;PL": 125314,
+      "V;NFIN;IMP+SBJV": 31848,
+      "V;V.PTCP;PRS": 23918,
+      "V;PRS;3;SG": 23916,
+      "V;PST": 23916,
+      "V;V.PTCP;PST": 23916,
+      "ADJ;CMPR": 2008,
+      "ADJ;SPRL": 2008
+    },
+    "tag_component_frequency": {
+      "N": 388563,
+      "SG": 287165,
+      "ADJ": 136400,
+      "V": 127514,
+      "PL": 125314,
+      "PRS": 47834,
+      "V.PTCP": 47834,
+      "PST": 47832,
+      "NFIN": 31848,
+      "IMP+SBJV": 31848,
+      "3": 23916,
+      "CMPR": 2008,
+      "SPRL": 2008
+    },
+    "upos_frequency": {
+      "N": 388563,
+      "ADJ": 136400,
+      "V": 127514
+    },
+    "pairs_with_multiple_tagsets": 58112,
+    "forms_with_multiple_lemmas": 11029,
+    "required_samples": {
+      "go": [
+        {
+          "form": "goes",
+          "tag": "V;PRS;3;SG"
+        },
+        {
+          "form": "going",
+          "tag": "V;V.PTCP;PRS"
+        },
+        {
+          "form": "went",
+          "tag": "V;PST"
+        },
+        {
+          "form": "gone",
+          "tag": "V;V.PTCP;PST"
+        },
+        {
+          "form": "countable",
+          "tag": "N;PL"
+        },
+        {
+          "form": "go",
+          "tag": "V;NFIN;IMP+SBJV"
+        },
+        {
+          "form": "go",
+          "tag": "N;SG"
+        },
+        {
+          "form": "go",
+          "tag": "ADJ"
+        }
+      ],
+      "went": [
+        {
+          "form": "wents",
+          "tag": "N;PL"
+        },
+        {
+          "form": "went",
+          "tag": "N;SG"
+        }
+      ],
+      "gone": [
+        {
+          "form": "gone",
+          "tag": "ADJ"
+        }
+      ],
+      "going": [
+        {
+          "form": "goings",
+          "tag": "N;PL"
+        },
+        {
+          "form": "going",
+          "tag": "N;SG"
+        },
+        {
+          "form": "going",
+          "tag": "ADJ"
+        }
+      ],
+      "goes": [],
+      "study": [
+        {
+          "form": "studies",
+          "tag": "V;PRS;3;SG"
+        },
+        {
+          "form": "studying",
+          "tag": "V;V.PTCP;PRS"
+        },
+        {
+          "form": "studied",
+          "tag": "V;PST"
+        },
+        {
+          "form": "studied",
+          "tag": "V;V.PTCP;PST"
+        },
+        {
+          "form": "countable",
+          "tag": "N;PL"
+        },
+        {
+          "form": "study",
+          "tag": "V;NFIN;IMP+SBJV"
+        },
+        {
+          "form": "study",
+          "tag": "N;SG"
+        }
+      ],
+      "studied": [],
+      "studying": [
+        {
+          "form": "studying",
+          "tag": "N;SG"
+        }
+      ],
+      "run": [
+        {
+          "form": "run",
+          "tag": "ADJ"
+        },
+        {
+          "form": "run",
+          "tag": "V;NFIN;IMP+SBJV"
+        },
+        {
+          "form": "run",
+          "tag": "N;SG"
+        }
+      ],
+      "ran": [
+        {
+          "form": "ran",
+          "tag": "N;SG"
+        }
+      ],
+      "running": [
+        {
+          "form": "running",
+          "tag": "ADJ"
+        },
+        {
+          "form": "running",
+          "tag": "N;SG"
+        }
+      ],
+      "child": [
+        {
+          "form": "child",
+          "tag": "N;SG"
+        },
+        {
+          "form": "child",
+          "tag": "V;NFIN;IMP+SBJV"
+        }
+      ],
+      "children": [],
+      "mouse": [
+        {
+          "form": "mice",
+          "tag": "N;PL"
+        },
+        {
+          "form": "mouses",
+          "tag": "V;PRS;3;SG"
+        },
+        {
+          "form": "mousing",
+          "tag": "V;V.PTCP;PRS"
+        },
+        {
+          "form": "moused",
+          "tag": "V;PST"
+        },
+        {
+          "form": "moused",
+          "tag": "V;V.PTCP;PST"
+        },
+        {
+          "form": "mouse",
+          "tag": "N;SG"
+        },
+        {
+          "form": "mouse",
+          "tag": "V;NFIN;IMP+SBJV"
+        }
+      ],
+      "mice": [],
+      "see": [
+        {
+          "form": "sees",
+          "tag": "V;PRS;3;SG"
+        },
+        {
+          "form": "seeing",
+          "tag": "V;V.PTCP;PRS"
+        },
+        {
+          "form": "saw",
+          "tag": "V;PST"
+        },
+        {
+          "form": "seen",
+          "tag": "V;V.PTCP;PST"
+        },
+        {
+          "form": "sees",
+          "tag": "N;PL"
+        },
+        {
+          "form": "see",
+          "tag": "V;NFIN;IMP+SBJV"
+        },
+        {
+          "form": "see",
+          "tag": "N;SG"
+        }
+      ],
+      "saw": [
+        {
+          "form": "saws",
+          "tag": "N;PL"
+        },
+        {
+          "form": "saws",
+          "tag": "V;PRS;3;SG"
+        },
+        {
+          "form": "sawing",
+          "tag": "V;V.PTCP;PRS"
+        },
+        {
+          "form": "sawed",
+          "tag": "V;PST"
+        },
+        {
+          "form": "sawed",
+          "tag": "V;V.PTCP;PST"
+        },
+        {
+          "form": "saw",
+          "tag": "N;SG"
+        },
+        {
+          "form": "saw",
+          "tag": "V;NFIN;IMP+SBJV"
+        }
+      ],
+      "seen": [
+        {
+          "form": "seens",
+          "tag": "N;PL"
+        },
+        {
+          "form": "seen",
+          "tag": "N;SG"
+        }
+      ],
+      "good": [
+        {
+          "form": "better",
+          "tag": "ADJ;CMPR"
+        },
+        {
+          "form": "best",
+          "tag": "ADJ;SPRL"
+        },
+        {
+          "form": "better",
+          "tag": "ADJ;CMPR"
+        },
+        {
+          "form": "best",
+          "tag": "ADJ;SPRL"
+        },
+        {
+          "form": "good",
+          "tag": "ADJ"
+        },
+        {
+          "form": "good",
+          "tag": "N;SG"
+        },
+        {
+          "form": "good",
+          "tag": "V;NFIN;IMP+SBJV"
+        }
+      ],
+      "better": [
+        {
+          "form": "betters",
+          "tag": "N;PL"
+        },
+        {
+          "form": "betters",
+          "tag": "V;PRS;3;SG"
+        },
+        {
+          "form": "bettering",
+          "tag": "V;V.PTCP;PRS"
+        },
+        {
+          "form": "bettered",
+          "tag": "V;PST"
+        },
+        {
+          "form": "bettered",
+          "tag": "V;V.PTCP;PST"
+        },
+        {
+          "form": "better",
+          "tag": "N;SG"
+        },
+        {
+          "form": "better",
+          "tag": "V;NFIN;IMP+SBJV"
+        }
+      ],
+      "best": [
+        {
+          "form": "best",
+          "tag": "N;SG"
+        },
+        {
+          "form": "best",
+          "tag": "V;NFIN;IMP+SBJV"
+        }
+      ],
+      "book": [
+        {
+          "form": "books",
+          "tag": "V;PRS;3;SG"
+        },
+        {
+          "form": "booking",
+          "tag": "V;V.PTCP;PRS"
+        },
+        {
+          "form": "booked",
+          "tag": "V;PST"
+        },
+        {
+          "form": "booked",
+          "tag": "V;V.PTCP;PST"
+        },
+        {
+          "form": "book",
+          "tag": "V;NFIN;IMP+SBJV"
+        },
+        {
+          "form": "book",
+          "tag": "N;SG"
+        }
+      ],
+      "books": [],
+      "read": [
+        {
+          "form": "reads",
+          "tag": "V;PRS;3;SG"
+        },
+        {
+          "form": "reading",
+          "tag": "V;V.PTCP;PRS"
+        },
+        {
+          "form": "read",
+          "tag": "V;PST"
+        },
+        {
+          "form": "read",
+          "tag": "V;V.PTCP;PST"
+        },
+        {
+          "form": "reads",
+          "tag": "N;PL"
+        },
+        {
+          "form": "read",
+          "tag": "V;NFIN;IMP+SBJV"
+        },
+        {
+          "form": "read",
+          "tag": "N;SG"
+        }
+      ]
+    }
+  },
+  "existing_output_dictionary": {
+    "bytes": 2891776,
+    "entries": 10000,
+    "senses": 15730,
+    "sample_words": {
+      "Introduction": {
+        "word": "introduction",
+        "phonetic": ".intrә'dʌkʃәn",
+        "translation_raw": "n. 介绍, 传入, 采用, 初步",
+        "exchange": "s:introductions",
+        "senses": [
+          [
+            "n",
+            "介绍, 传入, 采用, 初步",
+            0
+          ]
+        ]
+      },
+      "important": {
+        "word": "important",
+        "phonetic": "im'pɒ:tәnt",
+        "translation_raw": "a. 重要的, 有地位的, 大量的, 显要的, 自负的\\n[计] 要点",
+        "exchange": null,
+        "senses": [
+          [
+            "adj",
+            "重要的, 有地位的, 大量的, 显要的, 自负的\n[计] 要点",
+            0
+          ]
+        ]
+      },
+      "factory": {
+        "word": "factory",
+        "phonetic": "'fæktәri",
+        "translation_raw": "n. 工厂, 产生地, 代理店\\n[经] 工厂, 代理店, 商行在国外的代理处",
+        "exchange": "s:factories",
+        "senses": [
+          [
+            "n",
+            "工厂, 产生地, 代理店\n[经] 工厂, 代理店, 商行在国外的代理处",
+            0
+          ]
+        ]
+      },
+      "practice": {
+        "word": "practice",
+        "phonetic": "'præktis",
+        "translation_raw": "n. 实践, 练习, 实行, 惯例, 习惯, 开业\\nv. 实践, 实行, 练习, 实习, 业务",
+        "exchange": "s:practices/3:practices/i:practicing/p:practiced/d:practiced",
+        "senses": [
+          [
+            "n",
+            "实践, 练习, 实行, 惯例, 习惯, 开业",
+            0
+          ],
+          [
+            "v",
+            "实践, 实行, 练习, 实习, 业务",
+            1
+          ]
+        ]
+      },
+      "book": {
+        "word": "book",
+        "phonetic": "buk",
+        "translation_raw": "n. 书, 书籍, 帐簿, 名册, 工作簿\\nv. 登记, 预订\\n[计] 工作簿",
+        "exchange": "s:books/d:booked/p:booked/i:booking/3:books",
+        "senses": [
+          [
+            "n",
+            "书, 书籍, 帐簿, 名册, 工作簿",
+            0
+          ],
+          [
+            "v",
+            "登记, 预订\n[计] 工作簿",
+            1
+          ]
+        ]
+      },
+      "go": {
+        "word": "go",
+        "phonetic": "gou",
+        "translation_raw": "vi. 去, 走, 达到, 运转, 查阅, 消失, 结束, 放弃, 花费, 流传, 趋于, 打算, 剩下\\nvt. 以...打赌, 对付, 忍受, 出产, 为被捕者出(保释金)\\nn. 去, 尝试, 进行",
+        "exchange": "i:going/p:went/d:gone/3:goes",
+        "senses": [
+          [
+            "vi",
+            "去, 走, 达到, 运转, 查阅, 消失, 结束, 放弃, 花费, 流传, 趋于, 打算, 剩下",
+            0
+          ],
+          [
+            "vt",
+            "以...打赌, 对付, 忍受, 出产, 为被捕者出(保释金)",
+            1
+          ],
+          [
+            "n",
+            "去, 尝试, 进行",
+            2
+          ]
+        ]
+      },
+      "read": {
+        "word": "read",
+        "phonetic": "ri:d",
+        "translation_raw": "v. 读, 阅读, 理解\\na. 有学问的\\nn. 读取, 阅读\\n[计] 读取",
+        "exchange": "d:read/0:read/1:dp/i:reading/p:read/3:reads",
+        "senses": [
+          [
+            "v",
+            "读, 阅读, 理解",
+            0
+          ],
+          [
+            "adj",
+            "有学问的",
+            1
+          ],
+          [
+            "n",
+            "读取, 阅读\n[计] 读取",
+            2
+          ]
+        ]
+      }
+    }
+  }
+}

@@ -1,7 +1,11 @@
 package com.lexinote.app
 
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.ScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Modifier
@@ -84,5 +88,36 @@ class ReaderLayoutTest {
         assertEquals(5, selected.last().start)
         rule.runOnIdle { phonetics.value = false; translations.value = false }
         assertEquals(plainHeight, paragraphHeight(), 1f)
+    }
+
+    @Test fun longPressUsesWordCallbackWithoutTapAndScrollDoesNotDispatchTap() {
+        val tapped = mutableListOf<ReaderToken>()
+        val longPressed = mutableListOf<ReaderToken>()
+        val scroll = ScrollState(0)
+        val block = ReaderDocumentCache().get(1, "book room ".repeat(35)).single()
+        rule.setContent {
+            MaterialTheme {
+                Column(Modifier.width(300.dp).height(120.dp).verticalScroll(scroll)) {
+                    ReaderParagraphLayout(
+                        block = block,
+                        annotations = emptyMap(),
+                        phonetics = false,
+                        translations = false,
+                        onWord = { tapped += it },
+                        onLongPress = { longPressed += it }
+                    )
+                }
+            }
+        }
+
+        rule.onAllNodesWithText("book").onFirst().performTouchInput { longClick() }
+        assertTrue(tapped.isEmpty())
+        assertEquals(0, longPressed.single().start)
+
+        rule.onAllNodesWithText("room").onFirst().performTouchInput { click() }
+        assertEquals(5, tapped.single().start)
+        rule.onAllNodesWithText("book").onFirst().performTouchInput { swipeUp() }
+        assertEquals(1, tapped.size)
+        assertTrue(scroll.value > 0)
     }
 }

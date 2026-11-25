@@ -23,7 +23,7 @@ captures/
 Thumbs.db
 
 # ECDICT source data and generated output
-tools/dictionary/raw/*.csv
+tools/dictionary/raw/
 tools/dictionary/output/*.db
 tools/dictionary/output/*.db-*
 tools/dictionary/reports/build_report.json
@@ -34,3 +34,4 @@ tools/dictionary/reports/build_report.json
 # Python caches
 __pycache__/
 *.pyc
+/android/app/release/

@@ -11,8 +11,10 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
+internal enum class ArticleReaderMode { Standard, Quick }
+
 @Composable
-internal fun ReaderBody(id: Long, content: String, vm: ArticleViewModel, phonetics: Boolean, translations: Boolean) {
+internal fun ReaderBody(id: Long, content: String, vm: ArticleViewModel, phonetics: Boolean, translations: Boolean, mode: ArticleReaderMode) {
     val document by produceState<List<ReaderBlock>?>(null, id, content) {
         value = null
         value = withContext(Dispatchers.Default) { vm.readerCache.get(id, content) }
@@ -22,14 +24,20 @@ internal fun ReaderBody(id: Long, content: String, vm: ArticleViewModel, phoneti
         annotations.value.rows.takeIf { annotations.value.articleId == id }?.associateBy { it.startOffset } ?: emptyMap()
     } }
     val currentIndex = rememberUpdatedState(indexed)
-    val onWord = remember(vm) { { token: ReaderToken -> vm.lookupWord(token.text, token.start, token.end) } }
+    val onWord = remember(vm, id, mode) {
+        { token: ReaderToken ->
+            if (mode == ArticleReaderMode.Quick) vm.toggleQuickPhonetic(id, token)
+            else vm.lookupWord(token.text, token.start, token.end)
+        }
+    }
+    val onLongPress = remember(vm) { { token: ReaderToken -> vm.lookupWord(token.text, token.start, token.end) } }
     if (document == null) CircularProgressIndicator()
     else LazyColumn(Modifier.fillMaxSize().padding(top = 16.dp)) {
         items(document!!, key = { "$id:${it.start}:${it.end}" }) { block ->
             val local by remember(block, currentIndex) { derivedStateOf {
                 block.tokens.mapNotNull { token -> currentIndex.value[token.start]?.takeIf { it.endOffset == token.end && it.word.equals(token.text, true) } }.associateBy { it.startOffset }
             } }
-            ReaderParagraphLayout(block, local, phonetics, translations, onWord)
+            ReaderParagraphLayout(block, local, phonetics, translations, onLongPress = onLongPress, onWord = onWord)
         }
     }
 }

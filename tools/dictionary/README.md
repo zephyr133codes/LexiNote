@@ -1,24 +1,29 @@
 # LexiNote 离线英语词典构建
 
-数据来源优先为 ECDICT 官方仓库： https://github.com/skywind3000/ECDICT
-官方原始 CSV 地址： https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv
-本项目脚本首次运行时会尝试从该地址下载；网络不可用时，可手动将官方仓库的 `ecdict.csv` 放到 `tools/dictionary/raw/ecdict.csv`。
+构建仅读取 `raw` 中用户已经准备的本地文件，不会联网下载、改写或删除原始数据。V0.3.5.5 保留 V0.3.5.4 的词条补充；如果 ECDICT 词条仅有缩写释义，则拒绝 UniMorph 将其标为动词原形的关系，避免把缩写 `hav` 误用为 `have` 词族的动词原形。
 
-官方仓库标注 MIT 许可证（LICENSE），但 README 描述词典汇集自多个词库和语料来源。MIT 标注不应被视为自动清除了所有上游数据权利义务；在将数据库随 APK 分发前，应逐项核实第三方数据来源许可及归属要求。本工作区保留原始来源信息，未将数据库复制到 Android assets。
+## 来源与许可
 
-## 构建
+- `ecdict.csv`：UTF-8 CSV，770,611 条逻辑记录，13 列；释义字段使用字面 `\\n` 分隔，构建时只在释义解析层转换。ECDICT 仓库采用 MIT 许可证；其 README 说明词典长期汇集了多种来源，随 APK 发布时仍需保留声明并留意上游来源要求。
+- `eng.txt`：UTF-8、三列 TSV（lemma、form、tagset），652,477 条记录。仅映射本构建脚本明确支持的名词复数、动词时态/分词和形容词比较级/最高级标签；未知标签不推测。UniMorph `eng` 仓库声明 CC BY-SA 3.0，随 APK 发布时保留署名、修改说明和相同方式共享声明。
+- `lemma.en.txt`：UTF-8 的 `lemma/count -> comma-separated forms` 格式，84,497 组。文件头只授权研究和/或教育用途，未明确 APK 再分发授权，因此只审计、不合并到可分发数据库。取得明确许可后再加入。
 
-在仓库根目录执行：
+原始快照的哈希、头部样例、字段统计、异常及样例见 `reports/source_analysis.md`。APK 随附的许可证告知文本见 Android assets 的 `THIRD_PARTY_NOTICES.md`。
+
+## 构建和校验
+
+使用 Python 3 标准库：
 
 ```powershell
+python tools/dictionary/analyze_sources.py
 python tools/dictionary/build_dictionary.py
 python tools/dictionary/validate_dictionary.py
 ```
 
-输出：`output/dictionary.db` 和 `reports/build_report.json`。脚本使用标准库、逐行读取 CSV；重复单词采用大小写折叠键合并，尽量补齐空字段，并在释义更完整时采用较长 translation。优先按真实 tag 中的 CET/考试标签，再按真实 frq、bnc 数值排序，最多收录 10,000 个有效词条，不伪造词频。
+产物为 `output/dictionary-v0.3.5.5.db`，不会覆盖旧 `output/dictionary.db` 或 Android assets。先检查 `reports/build_report.json` 和校验结果；只有通过后，才由交付步骤将候选库复制到 `android/app/src/main/assets/dictionary.db`。
 
-## 释义规则
+词条按真实考试标签、Oxford 标记或 BNC/FRQ 正排名筛选；再补入这些词条在 ECDICT exchange 中明确关联且自身有释义的形式，并保留所有旧版词条及释义。中文释义不生成。未识别的词性保留为 `unknown`，不丢弃其释义。
 
-translation 原文逐词条保留。只将 `n.`、`v.`、`adj.`、`adv.` 等明确词性标记作为分组边界；各标记之间文本作为该词性释义整体保存，不按逗号、分号拆义项。未能识别词性时以 `unknown` 保存整段内容。exchange 原始字符串保留，不执行词形还原。词条查询键使用 SQLite `NOCASE` 唯一约束。
+词形关系优先取 ECDICT exchange 的明确编码，其次取 UniMorph 明确标签。对 ECDICT exchange 未提供形式的少数词条，仅在释义明确写出“某原形的复数”且 UniMorph 同时存在对应 `N;PL` 关系时补入两端词条及关系。相同 lemma/form/词性/变化类型只存一条并合并来源；存在 ECDICT 相反类型时舍弃冲突的 UniMorph 关系。非法端点、未知编码和 POS 冲突计入构建报告。`past` 与 `past_participle` 分别存储，即使同一单词拼写（如 read → read）也保留。
 
-实际版本/提交标识、下载时间、原始/最终行数、异常计数、查询样例、文件大小均写入构建报告。首次下载成功时报告记录下载 URL；执行后请保留 CSV 以便复现。
+本工具仅构建与校验词典 SQLite，不接触用户的 `lexinote.db`。
